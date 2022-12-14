@@ -21,6 +21,6 @@ from .views import saludar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludar/', saludar),
-    path("AppCoder/", include("AppCoder.urls")),
+    path('AppCoder/', include('AppCoder.urls')),
    
 ]
