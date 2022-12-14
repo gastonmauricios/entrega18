@@ -4,8 +4,10 @@ from django.db import models
 
 class Familiares(models.Model):
     nombre=models.CharField(max_length=20) # es el str
-    tipoFamilia=models.IntegerField()
+    apellido=models.IntegerField()
     edad=models.IntegerField(max_length=2)
 
     def __str__(self):
-        return self.nombre+" "+str(self.tipoFamilia)+" "+str(self.edad)
+        return self.nombre+" "+(self.apellido)+" "+str(self.edad)
+
+class Hermana(models.Model):
