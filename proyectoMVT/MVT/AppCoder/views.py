@@ -7,6 +7,7 @@ from django.http import HttpResponse
 def papa(request):
 
     papitos= Papa (nombre="Nicolas", apellido="Sciarra", edad=74, nacimiento="3 de abril 1945")
+    papitos.save()
     cadena_texto=f"Nombre de familiares: Nombre: {papitos.nombre}, Apellido: {papitos.apellido}, Edad {papitos.edad}, Fecha de Nac: {papitos.nacimiento}"
     return HttpResponse(cadena_texto)
     
