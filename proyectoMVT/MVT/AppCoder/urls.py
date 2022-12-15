@@ -5,8 +5,7 @@ from AppCoder.views import * #llevar a urls mama
 
 urlpatterns = [
     
-    path("familia/", familia),
-
+   
 
     
 ]

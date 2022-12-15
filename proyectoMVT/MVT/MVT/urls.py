@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import *
-from AppCoder.views import papa
+from AppCoder.views import papa, mama, hermana
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +28,8 @@ urlpatterns = [
     path('anionacimiento/<edad>', calcula_anio_nacimiento),
     path('probandoHtml/', probandoHtml ),
     path('papa/', papa),
+    path('mama/', mama),
+    path('hermana', hermana),
 
    
 ]

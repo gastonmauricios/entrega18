@@ -19,7 +19,7 @@ def mama(request):
     return HttpResponse(cadena_texto)
 
 def hermana(request):
-    hermanita= Hermana (nombre="Caro", apellido="Sciarra", edad=74, nacimiento="26 de septiembre")
+    hermanita= Hermana (nombre="Caro", apellido="Sciarra", edad=40, nacimiento="26 de septiembre")
     hermanita.save()
     cadena_texto=f"Nombre de familiares: Nombre: {hermanita.nombre}, Apellido: {hermanita.apellido}, Edad {hermanita.edad}, Fecha de Nac: {hermanita.nacimiento}"
     return HttpResponse(cadena_texto)
