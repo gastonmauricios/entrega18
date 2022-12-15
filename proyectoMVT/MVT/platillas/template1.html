@@ -8,8 +8,25 @@
 </head>
 <body>
     <h1>ES MUY FACIL USAR PLATILLAS</h1>
-    <H3>ESTAMOS EN LA COMI DE DJANGO 34645</H3>
+    <H3>ESTAMOS EN LA COMI DE DJANGO 34645 </H3>
 
-    <h4>Edad de personas en mi familia </H4>
+        <p>Nombre = {{ nombre }}</p>
+        <p>Apellido = {{ apellido }}</p>
+        <p>Edad = {{ edad }}</p>
+        <h4>lista de notas </h4>
+        
+        <ul>
+                {% for nota in lista_de_notas %}
+                              
+                    {% if nota > 5 %} 
+                    <li style="color: aqua;"> Nota Aprobada: {{ nota }} </li>
+                    {% else %}
+                    <li style="color: red;"> No Aprobada: {{ nota }} </li> 
+                    {% endif %}
+                {% endfor %}
+
+        </ul>
+
+    
 </body>
 </html>

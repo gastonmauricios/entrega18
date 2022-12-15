@@ -1,17 +1,17 @@
 from django.db import models
 
 
-# Create your models here.
+# Create your models here. # ESTOS SON LOS MODELOS TABLAS DE BASE DE DATOS
 class Papa(models.Model): # es una herencia objeto
     
-    nombre=models.CharField(max_length=20)
+    nombre=models.CharField(max_length=20) # campo de texto
     apellido=models.CharField(max_length=20)
     nacimiento=models.DateField()
-    edad=models.IntegerField()
-    profesion=models.CharField(max_length=20)
+    edad=models.IntegerField() # numeros enteros
+   
 
     def __str__(self):
-        return self.nombre+" "+self.apellido+" "+str(self.edad)+" "+self.nacimiento+" "+self.profesion
+        return self.nombre+" "+self.apellido+" "+str(self.edad)+" "+self.nacimiento
 
 class Madre(models.Model): # es una herencia objeto
     
@@ -19,10 +19,9 @@ class Madre(models.Model): # es una herencia objeto
     apellido=models.CharField(max_length=20)
     nacimiento=models.DateField()
     edad=models.IntegerField()
-    profesion=models.CharField(max_length=20)
-
+    
     def __str__(self):
-        return self.nombre+" "+self.apellido+" "+str(self.edad)+" "+self.nacimiento+" "+self.profesion
+        return self.nombre+" "+self.apellido+" "+str(self.edad)+" "+self.nacimiento
 
 class Hermana(models.Model): # es una herencia objeto
     
@@ -30,7 +29,7 @@ class Hermana(models.Model): # es una herencia objeto
     apellido=models.CharField(max_length=20)
     nacimiento=models.DateField()
     edad=models.IntegerField()
-    profesion=models.CharField(max_length=20)
+    
 
     def __str__(self):
-        return self.nombre+" "+self.apellido+" "+str(self.edad)+" "+self.nacimiento+" "+self.profesion
+        return self.nombre+" "+self.apellido+" "+str(self.edad)+" "+self.nacimiento

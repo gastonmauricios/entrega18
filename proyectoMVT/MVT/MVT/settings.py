@@ -55,7 +55,7 @@ ROOT_URLCONF = 'MVT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ 'G:/Mi unidad/coderhouse/MVT/entrega18/proyectoMVT/MVT/platillas' ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
