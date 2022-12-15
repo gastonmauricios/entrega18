@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import *
+from AppCoder.views import papa
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +27,7 @@ urlpatterns = [
     path('saludo/<nombre>', saludo_con_nombre),
     path('anionacimiento/<edad>', calcula_anio_nacimiento),
     path('probandoHtml/', probandoHtml ),
+    path('papa/', papa),
 
    
 ]

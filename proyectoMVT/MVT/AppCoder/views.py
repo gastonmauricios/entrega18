@@ -1,21 +1,12 @@
 from django.shortcuts import render
-from .models import  Papa
+from .models import Papa
+from django.http import HttpResponse 
 
 # Create your views here. controladores en los views
 
-def familia(request):
+def papa(request):
 
-    familiares= Papa(nombre="Nicolas", edad=74)
-    familiares.save()
-    cadena_texto="familia guardada: Nombre: "+familiares.nombre+" "+str(familiares.edad)
-
-    
+    papitos= Papa (nombre="Nicolas", apellido="Sciarra", edad=74, nacimiento="3 de abril 1945")
+    cadena_texto=f"Nombre de familiares: Nombre: {papitos.nombre}, Apellido: {papitos.apellido}, Edad {papitos.edad}, Fecha de Nac: {papitos.nacimiento}"
     return HttpResponse(cadena_texto)
-
-
-    familiares.save()
-    cadena_texto="familia guardada: Nombre: "+familiares.nombre+" "+str(familiares.edad)
-
     
-    return HttpResponse(cadena_texto)
-  
