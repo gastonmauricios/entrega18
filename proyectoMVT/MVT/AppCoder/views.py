@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import  Papa
-from django.http import HttpResponse
 
 # Create your views here.
 
@@ -15,7 +14,7 @@ def familia(request):
 
 def familia2(request):
 
-    familiares= Papa(nombre="Mirta", edad=68)
+    familiares= Mama(nombre="Mirta", edad=68)
     familiares.save()
     cadena_texto="familia guardada: Nombre: "+familiares.nombre+" "+str(familiares.edad)
 
@@ -25,7 +24,7 @@ def familia2(request):
 
 def familia3(request):
 
-    familiares= Papa(nombre="Caro", edad=35)
+    familiares= Hermana(nombre="Caro", edad=35)
     familiares.save()
     cadena_texto="familia guardada: Nombre: "+familiares.nombre+" "+str(familiares.edad)
 

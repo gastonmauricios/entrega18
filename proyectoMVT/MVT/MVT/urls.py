@@ -15,12 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import saludar
-
+from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludar/', saludar),
-    path('AppCoder/', include('AppCoder.urls')),
+    path('AppCoder/', include('AppCoder.urls')), # path controla una url con un controlador!!!!
+    path('segunda/', segunda_vista),
+    path('dia/', dia_de_hoy),
+    path('saludo/<nombre>', saludo_con_nombre),
+    path('anionacimiento/<edad>', calcula_anio_nacimiento),
+    path('probandoHtml/', probandoHtml ),
+
    
 ]
