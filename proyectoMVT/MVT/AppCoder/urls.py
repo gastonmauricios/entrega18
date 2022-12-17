@@ -1,11 +1,13 @@
 
-
 from django.urls import path
-from AppCoder.views import * #llevar a urls mama
+from .views import * # un punto . es un directorios .. dos directorio
 
 urlpatterns = [
     
+    
+    path('papa/', papa),
+    path('mama/', mama),
+    path('hermana/', hermana),
    
-
     
 ]
